@@ -1,0 +1,68 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+/* Common */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.textWhite{
+  color: white!important;
+
+}
+/* Css */
+.SearchBox{
+  display: flex;
+  width: 100%;
+}
+.logo {
+  font-size: 30px;
+  font-family: Arial;
+}
+.SearchBox{
+  display: block;
+  padding: 0 20px;
+}
+.formSearch{
+  height: 40px;
+  display: flex;
+}
+.inputSeacrh{
+  border: none;
+  height: 100%; 
+  width: 85%;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+.btnSearch{
+  border: none;
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(13, 92, 182);
+}
+.btnSearch > svg {
+  font-size: 16px;
+  margin: 2px;
+}
+.adsFormSearch {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.adsFormSearch > a{
+  color: white;
+  font-size: 12px;
+}
