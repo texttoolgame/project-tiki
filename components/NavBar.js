@@ -1,14 +1,15 @@
 import React from "react";
+import { FlexboxUl, Gird02li, Gird03li, Gird07li, Flexboxdiv, Gird05div, Gird02div } from "../styles/GirdComponents.js"; 
 import { ContainerFull, ContainerFluid } from "../styles/StyledComponents.js";
-import { FlexboxUl, Grid02li, Grid03li, Grid07li, Flexboxdiv, Grid05div, Grid06div } from "../styles/GirdComponents.js"; 
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
+
 function NavBar() {
     return (
         <>
             <ContainerFull>
                 <ContainerFluid>
                     <FlexboxUl padding=" 20px 0">
-                        <Grid02li>
+                        <Gird02li>
                             <div className="logoBox textWhite">
                                 <div className="logo">
                                     TIKI
@@ -17,8 +18,8 @@ function NavBar() {
                                     Free ship +
                                 </div>
                             </div>
-                        </Grid02li>
-                        <Grid07li>
+                        </Gird02li>
+                        <Gird07li>
                             <div className="SearchBox">
                                 <form className="formSearch">
                                     <input className="inputSeacrh" name="inputSeacrh" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..." />
@@ -38,24 +39,29 @@ function NavBar() {
                                     <a href="">bánh kẹo</a>
                                 </div>
                             </div>
-                        </Grid07li>
-                        <Grid03li>
+                        </Gird07li>
+                        <Gird03li>
                             <Flexboxdiv>
                                 <Flexboxdiv>
-                                    <Grid05div>
-
-                                    </Grid05div>
-                                    <Grid06div>
+                                    <Gird02div>
+                                        <AiOutlineUser/>
+                                    </Gird02div>
+                                    
+                                    <Gird05div>
                                         đăng nhập/đăng ký
                                         <br/>
                                         Tài khoản
-                                    </Grid06div>
-                                </Flexboxdiv>
-                                <div>
+                                    </Gird05div>
 
-                                </div>
+                                    <Gird05div>
+                                        Giỏ hàng
+                                    </Gird05div>
+                                </Flexboxdiv>
+                                    <div>
+                                        bán hàng cùng tiki
+                                    </div>
                             </Flexboxdiv>
-                        </Grid03li>
+                        </Gird03li>
                     </FlexboxUl>
                 </ContainerFluid>
             </ContainerFull>
