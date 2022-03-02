@@ -62,7 +62,22 @@ a {
   justify-content: space-between;
   margin: 10px 0;
 }
+
 .adsFormSearch > a{
   color: white;
+  font-size: 12px;
+}
+.loginBox{
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.iconUser{
+  font-size: 40px;
+}
+.linkLogin{
+  font-size: 11px;
+}
+.iconCart{
   font-size: 12px;
 }

@@ -1,14 +1,14 @@
 import React from "react";
-import { FlexboxUl, Gird02li, Gird03li, Gird07li, Flexboxdiv, Gird05div, Gird02div } from "../styles/GirdComponents.js"; 
+import { FlexboxUl, Gird02li, Gird03li, Gird07li, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird05div  } from "../styles/GirdComponents.js"; 
 import { ContainerFull, ContainerFluid } from "../styles/StyledComponents.js";
-import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart} from "react-icons/ai";
 
 function NavBar() {
     return (
         <>
             <ContainerFull>
                 <ContainerFluid>
-                    <FlexboxUl padding=" 20px 0">
+                    <FlexboxUl padding=" 20px 0" flexDecoration="row">
                         <Gird02li>
                             <div className="logoBox textWhite">
                                 <div className="logo">
@@ -40,27 +40,34 @@ function NavBar() {
                                 </div>
                             </div>
                         </Gird07li>
-                        <Gird03li>
-                            <Flexboxdiv>
-                                <Flexboxdiv>
-                                    <Gird02div>
-                                        <AiOutlineUser/>
-                                    </Gird02div>
-                                    
-                                    <Gird05div>
-                                        đăng nhập/đăng ký
-                                        <br/>
-                                        Tài khoản
-                                    </Gird05div>
-
-                                    <Gird05div>
-                                        Giỏ hàng
-                                    </Gird05div>
-                                </Flexboxdiv>
-                                    <div>
-                                        bán hàng cùng tiki
+                        <Gird03li className="textWhite">
+                            <Flexboxdiv className="loginBox">
+                                <Gird02div className="iconUser">
+                                    <AiOutlineUser/>
+                                </Gird02div>
+                                <Gird06div>
+                                    <div className="linkLogin">
+                                        Đăng Nhập/Đăng Ký
                                     </div>
+                                    <div clas>
+                                        Tài khoản
+                                        <AiFillCaretDown/>
+                                    </div>
+                                </Gird06div>
+                                <Gird04div>
+                                    <Flexboxdiv flexDecoration="space-between">
+                                        <Gird06div className="iconUser">
+                                            <AiOutlineShoppingCart/>
+                                        </Gird06div>
+                                        <Gird06div className="iconCart">
+                                            Giỏ hàng
+                                        </Gird06div>
+                                    </Flexboxdiv>
+                                </Gird04div>
                             </Flexboxdiv>
+                            <div>
+                                bán hàng cùng tiki
+                            </div>
                         </Gird03li>
                     </FlexboxUl>
                 </ContainerFluid>

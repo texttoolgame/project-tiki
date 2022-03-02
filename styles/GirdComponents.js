@@ -2,12 +2,16 @@ import styled from "styled-components";
 
 export const FlexboxUl = styled.ul`
     display: flex;
-    flex-decoration: row;
+    flex-decoration: ${prop => prop.flexDecoration};
     list-style-type: none;
     height: ${prop => prop.height};
     width: ${prop => prop.width};
     padding : ${prop => prop.padding};
     margin: ${prop => prop.margin};
+    align-items: ${prop => prop.alignItem};
+    align-content: ${prop => prop.alignContent};
+    justify-content: ${prop => prop.justyfyContent};
+    justify-items: ${prop => prop.justifyItem};
 `
 export const Gird01li = styled.li`
     width: 08.3334%;
@@ -60,8 +64,16 @@ export const Gird12li = styled.li`
 // flex box div
 export const Flexboxdiv = styled.div`
     display: flex;
-    flex-decoration: row;
+    flex-decoration: ${prop => prop.flexDecoration};
     width: 100%;
+    height: ${prop => prop.height};
+    width: ${prop => prop.width};
+    padding : ${prop => prop.padding};
+    margin: ${prop => prop.margin};
+    align-items: ${prop => prop.alignItem};
+    align-content: ${prop => prop.alignContent};
+    justify-content: ${prop => prop.justyfyContent};
+    justify-items: ${prop => prop.justifyItem};
 `
 export const Gird01div = styled.div`
     width: 08.3334%;
