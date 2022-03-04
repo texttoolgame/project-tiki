@@ -41,7 +41,22 @@ a {
 }
 .formBoxLogin{
   background-color: #ffffff;
-  margin: auto auto;
+  padding: 0 40px;
+}
+.inputLogin{
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  height: 50px; 
+  font-size: 20px;
+}
+.submitLoginBtn{
+  background-color: rgb(255, 66, 78);
+  border: none;
+  width: 80%;
+  height: 50px;
+  font-size: 20px
 }
 .SearchBox{
   display: flex;

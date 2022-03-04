@@ -90,9 +90,27 @@ function NavBar() {
                         <Flexboxdiv>
                             <Flexboxdiv className="formBoxLogin">
                                 <Gird08div>
-                                    <h1>
-                                        Xin Chào
-                                    </h1>
+                                    <Flexboxdiv flexDecoration="colum">
+                                        <div>
+                                            <h2>
+                                                Xin Chào
+                                            </h2>
+                                            <p>
+                                                Đăng nhập hoặc Tạo tài khoản
+                                            </p>
+                                            <form>
+                                                <input className="inputLogin" placeholder="Số điện thoại"></input>
+                                                <br/>
+                                                <input className="submitLoginBtn textWhite" type='submit' value='Tiếp Tục'></input>
+                                            </form>
+                                            <a>
+                                                Đăng nhập bằng email
+                                            </a>
+                                        </div>
+                                        <Flexboxdiv>
+                                            <div></div>
+                                        </Flexboxdiv>
+                                    </Flexboxdiv>
                                 </Gird08div>
                                 <Gird04div>
                                     Mua sắm tại tiki
