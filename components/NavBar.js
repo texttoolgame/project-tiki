@@ -59,7 +59,7 @@ function NavBar() {
                                         <Gird06div className="iconUser">
                                             <AiOutlineShoppingCart/>
                                         </Gird06div>
-                                        <Gird06div className="iconCart">
+                                        <Gird06div className="  ">
                                             Giỏ hàng
                                         </Gird06div>
                                     </Flexboxdiv>
