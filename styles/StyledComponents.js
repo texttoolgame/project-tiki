@@ -2,7 +2,7 @@ import styled from "styled-components";
 //flexBoxul
 export const FlexboxUl = styled.ul`
     display: flex;
-    flex-decoration: ${prop => prop.flexDecoration};
+    flex-direction: ${prop => prop.flexDecoration};
     list-style-type: none;
     height: ${prop => prop.height};
     width: ${prop => prop.width};
@@ -97,8 +97,7 @@ export const Girdli12Offset = styled.li`
 // flex box div
 export const Flexboxdiv = styled.div`
     display: flex;
-    flex-decoration: ${prop => prop.flexDecoration};
-    width: 100%;
+    flex-direction: ${prop => prop.flexDecoration};
     height: ${prop => prop.height};
     width: ${prop => prop.width};
     padding : ${prop => prop.padding};
@@ -110,7 +109,7 @@ export const Flexboxdiv = styled.div`
 `
 export const Gird01div = styled.div`
     flex-basis: 08.3334%;
-    max-width: 08.3334%;
+    max-width: 08.3334%; 
 `
 export const Gird02div = styled.div`
     flex-basis: 16.6668%;

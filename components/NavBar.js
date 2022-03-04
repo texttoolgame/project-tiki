@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHome} from "react-icons/ai";
-import { ContainerFull, ContainerFluid, FlexboxUl, Gird02li, Gird03li, Gird07li, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird08div, Gird04divOffset  } from "../styles/StyledComponents.js";
+import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHome,AiOutlineGoogle, AiFillFacebook, AiFillGithub, AiOutlineClose} from "react-icons/ai";
+import { ContainerFull, ContainerFluid, FlexboxUl, Gird02li, Gird03li, Gird07li, Gird07div, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird08div, Gird04divOffset  } from "../styles/StyledComponents.js";
 function NavBar() {
     const [classLoginForm, setClassLoginForm] = useState();
     const openFormLogin = () =>{
@@ -85,15 +85,15 @@ function NavBar() {
                         </Gird03li>
                     </FlexboxUl>
                 </ContainerFluid>
-                <div onClick={closeFormLogin}  className={`loginFormBox ${classLoginForm ? 'loginFormBoxOpen' : ''}`}>
-                    <Gird08div>
+                <div className={`loginFormBox ${classLoginForm ? 'loginFormBoxOpen' : ''}`} > 
+                    <Gird06div>
                         <Flexboxdiv>
                             <Flexboxdiv className="formBoxLogin">
                                 <Gird08div>
-                                    <Flexboxdiv flexDecoration="colum">
-                                        <div>
+                                    <Flexboxdiv padding="20px 40px 0 40px" flexDecoration="column">
+                                        <div className="formLoginBox">
                                             <h2>
-                                                Xin Chào
+                                                Xin Chào,
                                             </h2>
                                             <p>
                                                 Đăng nhập hoặc Tạo tài khoản
@@ -103,22 +103,35 @@ function NavBar() {
                                                 <br/>
                                                 <input className="submitLoginBtn textWhite" type='submit' value='Tiếp Tục'></input>
                                             </form>
-                                            <a>
-                                                Đăng nhập bằng email
-                                            </a>
+                                            <button className="loginByGmail">
+                                                Đăng nhập bằng Gmail
+                                            </button>
                                         </div>
-                                        <Flexboxdiv>
-                                            <div></div>
+                                        <Flexboxdiv padding="40px 0" justifyItem="center" alignItem="center" flexDecoration="column">
+                                            <div>
+                                                Hoặc tiếp tục bằng
+                                            </div>
+                                            <Flexboxdiv className="iconLoginBox" justyfyContent="center">
+                                                <AiFillFacebook/>
+                                                <AiOutlineGoogle/>
+                                                <AiFillGithub/>
+                                            </Flexboxdiv>
+                                            <p className="fontSize12px">
+                                                Bằng việc tiếp tục, bạn đã chấp nhận
+                                                <a> điều khoản sử dụng</a>
+                                            </p>
                                         </Flexboxdiv>
                                     </Flexboxdiv>
                                 </Gird08div>
-                                <Gird04div>
+                                <Gird04div className="imgAdsLogin">
                                     Mua sắm tại tiki
                                 </Gird04div>
+                            <button  className="btnCloseFormLogin" onClick={closeFormLogin}>
+                                <AiOutlineClose/>
+                            </button>    
                             </Flexboxdiv>
                         </Flexboxdiv>
-                    </Gird08div>
-                   
+                    </Gird06div>
                 </div>
             </ContainerFull>
         </>
