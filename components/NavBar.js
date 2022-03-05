@@ -1,13 +1,21 @@
 import React, {useState} from "react";
-import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHome,AiOutlineGoogle, AiFillFacebook, AiFillGithub, AiOutlineClose} from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHome,AiOutlineGoogle, AiFillFacebook, AiFillGithub, AiOutlineClose, AiOutlineLeft} from "react-icons/ai";
 import { ContainerFull, ContainerFluid, FlexboxUl, Gird02li, Gird03li, Gird07li, Gird07div, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird08div, Gird04divOffset  } from "../styles/StyledComponents.js";
 function NavBar() {
     const [classLoginForm, setClassLoginForm] = useState();
+    const [openLoginEmail, setOpenloginEmail] = useState();
+    const fcOpenLoginEmail = ()=>{
+        setOpenloginEmail(true)
+    }
+    const fcCloseloginEmail = ()=>{
+        setOpenloginEmail()
+    }
     const openFormLogin = () =>{
         setClassLoginForm(true)
     }
     const closeFormLogin = ()=> {
-        setClassLoginForm()
+        setClassLoginForm();
+        setOpenloginEmail();
     }
     return (
         <>
@@ -87,11 +95,40 @@ function NavBar() {
                 </ContainerFluid>
                 <div className={`loginFormBox ${classLoginForm ? 'loginFormBoxOpen' : ''}`} > 
                     <Gird06div>
-                        <Flexboxdiv>
+                        <Flexboxdiv flexDecoration='column'>
                             <Flexboxdiv className="formBoxLogin">
-                                <Gird08div>
+                                <Gird08div className={`formLoginByGmailBox ${openLoginEmail ? 'formLoginBoxEmailOpen' : 'formLoginBoxEmailClose'}`}>
+                                    <Flexboxdiv flexDecoration="column" className="formLoginByGmail">
+                                        <button onClick={fcCloseloginEmail}>
+                                            <AiOutlineLeft/>
+                                        </button>
+                                        <div className="formLoginBoxEmail">
+                                            <h2 >
+                                                Đăng nhập bằng email
+                                            </h2>
+                                            <p>
+                                                Nhập email và mật khẩu tài khoản Tiki
+                                            </p>
+                                            <form>
+                                                <input className="inputLogin" placeholder="acb@email.com"></input>
+                                                <br/>
+                                                <input className="inputLogin" placeholder="mật khẩu"></input>
+                                                <br/>
+                                                <input className="submitLoginBtn textWhite" type='submit' value='Đăng Nhập'></input>
+                                            </form>
+                                            <div className="fontSize12px">
+                                                <a>Quên mật khẩu ?</a>
+                                                <p>
+                                                    Chưa có tài khoản ?
+                                                    <a> Tạo tài khoản</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </Flexboxdiv>
+                                </Gird08div>
+                                <Gird08div className={`formLoginDefault ${openLoginEmail ? 'formloginDefaultClose' : ''}`}>
                                     <Flexboxdiv padding="20px 40px 0 40px" flexDecoration="column">
-                                        <div className="formLoginBox">
+                                        <div className='formLoginBoxDefault'>
                                             <h2>
                                                 Xin Chào,
                                             </h2>
@@ -103,13 +140,18 @@ function NavBar() {
                                                 <br/>
                                                 <input className="submitLoginBtn textWhite" type='submit' value='Tiếp Tục'></input>
                                             </form>
-                                            <button className="loginByGmail">
+                                            <button onClick={fcOpenLoginEmail} className="loginByGmailText">
                                                 Đăng nhập bằng Gmail
                                             </button>
                                         </div>
                                         <Flexboxdiv padding="40px 0" justifyItem="center" alignItem="center" flexDecoration="column">
-                                            <div>
-                                                Hoặc tiếp tục bằng
+                                            <div className="moreLoginbox">
+                                                <div className="moreLogin">
+                                                    <p></p>
+                                                    <p>
+                                                        Hoặc tiếp tục bằng
+                                                    </p>
+                                                </div>
                                             </div>
                                             <Flexboxdiv className="iconLoginBox" justyfyContent="center">
                                                 <AiFillFacebook/>
