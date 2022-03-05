@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import {FlexboxUl, Gird02li, Gird03li, Gird07li, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird08div, Gird04divOffset } from "../styles/GirdComponents12";
 import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHome,AiOutlineGoogle, AiFillFacebook, AiFillGithub, AiOutlineClose, AiOutlineLeft} from "react-icons/ai";
-import { ContainerFull, ContainerFluid, FlexboxUl, Gird02li, Gird03li, Gird07li, Gird07div, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird08div, Gird04divOffset  } from "../styles/StyledComponents.js";
+import { ContainerFull, ContainerFluid, } from "../styles/StyledComponents.js";
 function NavBar() {
     const [classLoginForm, setClassLoginForm] = useState();
     const [openLoginEmail, setOpenloginEmail] = useState();
