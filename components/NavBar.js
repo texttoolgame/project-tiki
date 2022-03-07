@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {FlexboxUl, Gird02li, Gird03li, Gird07li, Flexboxdiv, Gird02div, Gird06div, Gird04div, Gird08div, Gird04divOffset } from "../styles/GirdComponents12";
+import {Flexbox12iUl, Gird12i02li, Gird12i03li, Gird12i07li, Flexbox12idiv, Gird12i02div, Gird12i06div, Gird12i04div, Gird12i08div, Gird12i04divOffset } from "../styles/GirdComponents12";
 import { AiOutlineSearch, AiOutlineUser, AiFillCaretDown, AiOutlineShoppingCart, AiOutlineHome,AiOutlineGoogle, AiFillFacebook, AiFillGithub, AiOutlineClose, AiOutlineLeft} from "react-icons/ai";
 import { ContainerFull, ContainerFluid, } from "../styles/StyledComponents.js";
 function NavBar() {
@@ -22,8 +22,8 @@ function NavBar() {
         <>
             <ContainerFull className="Navbox">
                 <ContainerFluid>
-                    <FlexboxUl padding=" 20px 0" flexDecoration="row">
-                        <Gird02li>
+                    <Flexbox12iUl padding=" 20px 0" flexDecoration="row">
+                        <Gird12i02li>
                             <div className="logoBox textWhite">
                                 <div className="logo">
                                     TIKI
@@ -32,8 +32,8 @@ function NavBar() {
                                     Free ship +
                                 </div>
                             </div>
-                        </Gird02li>
-                        <Gird07li>
+                        </Gird12i02li>
+                        <Gird12i07li>
                             <div className="SearchBox">
                                 <form className="formSearch">
                                     <input className="inputSeacrh" name="inputSeacrh" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..." />
@@ -53,15 +53,15 @@ function NavBar() {
                                     <a href="">bánh kẹo</a>
                                 </div>
                             </div>
-                        </Gird07li>
+                        </Gird12i07li>
                         
-                        <Gird03li className="textWhite">
-                            <Flexboxdiv className="loginBox">
+                        <Gird12i03li className="textWhite">
+                            <Flexbox12idiv className="loginBox">
                                 <button onClick={openFormLogin}  className="btnLoginForm"></button>
-                                <Gird02div className="iconUserAndCart">
+                                <Gird12i02div className="iconUserAndCart">
                                     <AiOutlineUser/>
-                                </Gird02div>
-                                <Gird06div>
+                                </Gird12i02div>
+                                <Gird12i06div>
                                     <div className="linkLogin fontSize12px">
                                         Đăng Nhập/Đăng Ký
                                     </div>
@@ -69,37 +69,37 @@ function NavBar() {
                                         Tài khoản
                                         <AiFillCaretDown/>
                                     </div>
-                                </Gird06div>
-                                <Gird04div>
-                                    <Flexboxdiv flexDecoration="space-between">
-                                        <Gird06div className="iconUserAndCart">
+                                </Gird12i06div>
+                                <Gird12i04div>
+                                    <Flexbox12idiv flexDecoration="space-between">
+                                        <Gird12i06div className="iconUserAndCart">
                                             <AiOutlineShoppingCart/>
                                             <p className="countProductIncart fontSize12px">0</p>
-                                        </Gird06div>
-                                        <Gird06div className="cartTitle fontSize12px">
+                                        </Gird12i06div>
+                                        <Gird12i06div className="cartTitle fontSize12px">
                                             Giỏ hàng
-                                        </Gird06div>
-                                    </Flexboxdiv>
-                                </Gird04div>
-                            </Flexboxdiv>
-                            <Flexboxdiv justyfyContent="space-between">
-                                <Gird04divOffset></Gird04divOffset>
-                                <Gird06div className="resgiterSeller">
+                                        </Gird12i06div>
+                                    </Flexbox12idiv>
+                                </Gird12i04div>
+                            </Flexbox12idiv>
+                            <Flexbox12idiv justyfyContent="space-between">
+                                <Gird12i04divOffset></Gird12i04divOffset>
+                                <Gird12i06div className="resgiterSeller">
                                     <AiOutlineHome/>
                                     <p>
                                         Bán Hàng Cùng TiKi
                                     </p>
-                                </Gird06div>
-                            </Flexboxdiv>
-                        </Gird03li>
-                    </FlexboxUl>
+                                </Gird12i06div>
+                            </Flexbox12idiv>
+                        </Gird12i03li>
+                    </Flexbox12iUl>
                 </ContainerFluid>
                 <div className={`loginFormBox ${classLoginForm ? 'loginFormBoxOpen' : ''}`} > 
-                    <Gird06div>
-                        <Flexboxdiv flexDecoration='column'>
-                            <Flexboxdiv className="formBoxLogin">
-                                <Gird08div className={`formLoginByGmailBox ${openLoginEmail ? 'formLoginBoxEmailOpen' : 'formLoginBoxEmailClose'}`}>
-                                    <Flexboxdiv flexDecoration="column" className="formLoginByGmail">
+                    <Gird12i06div>
+                        <Flexbox12idiv flexDecoration='column'>
+                            <Flexbox12idiv className="formBoxLogin">
+                                <Gird12i08div className={`formLoginByGmailBox ${openLoginEmail ? 'formLoginBoxEmailOpen' : 'formLoginBoxEmailClose'}`}>
+                                    <Flexbox12idiv flexDecoration="column" className="formLoginByGmail">
                                         <button onClick={fcCloseloginEmail}>
                                             <AiOutlineLeft/>
                                         </button>
@@ -125,10 +125,10 @@ function NavBar() {
                                                 </p>
                                             </div>
                                         </div>
-                                    </Flexboxdiv>
-                                </Gird08div>
-                                <Gird08div className={`formLoginDefault ${openLoginEmail ? 'formloginDefaultClose' : ''}`}>
-                                    <Flexboxdiv padding="20px 40px 0 40px" flexDecoration="column">
+                                    </Flexbox12idiv>
+                                </Gird12i08div>
+                                <Gird12i08div className={`formLoginDefault ${openLoginEmail ? 'formloginDefaultClose' : ''}`}>
+                                    <Flexbox12idiv padding="20px 40px 0 40px" flexDecoration="column">
                                         <div className='formLoginBoxDefault'>
                                             <h2>
                                                 Xin Chào,
@@ -145,7 +145,7 @@ function NavBar() {
                                                 Đăng nhập bằng Gmail
                                             </button>
                                         </div>
-                                        <Flexboxdiv padding="40px 0" justifyItem="center" alignItem="center" flexDecoration="column">
+                                        <Flexbox12idiv padding="40px 0" justifyItem="center" alignItem="center" flexDecoration="column">
                                             <div className="moreLoginbox">
                                                 <div className="moreLogin">
                                                     <p></p>
@@ -154,27 +154,27 @@ function NavBar() {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <Flexboxdiv className="iconLoginBox" justyfyContent="center">
+                                            <Flexbox12idiv className="iconLoginBox" justyfyContent="center">
                                                 <AiFillFacebook/>
                                                 <AiOutlineGoogle/>
                                                 <AiFillGithub/>
-                                            </Flexboxdiv>
+                                            </Flexbox12idiv>
                                             <p className="fontSize12px">
                                                 Bằng việc tiếp tục, bạn đã chấp nhận
                                                 <a> điều khoản sử dụng</a>
                                             </p>
-                                        </Flexboxdiv>
-                                    </Flexboxdiv>
-                                </Gird08div>
-                                <Gird04div className="imgAdsLogin">
+                                        </Flexbox12idiv>
+                                    </Flexbox12idiv>
+                                </Gird12i08div>
+                                <Gird12i04div className="imgAdsLogin">
                                     Mua sắm tại tiki
-                                </Gird04div>
+                                </Gird12i04div>
                             <button  className="btnCloseFormLogin" onClick={closeFormLogin}>
                                 <AiOutlineClose/>
                             </button>    
-                            </Flexboxdiv>
-                        </Flexboxdiv>
-                    </Gird06div>
+                            </Flexbox12idiv>
+                        </Flexbox12idiv>
+                    </Gird12i06div>
                 </div>
             </ContainerFull>
         </>

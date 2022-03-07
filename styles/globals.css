@@ -18,12 +18,16 @@ a {
 .textWhite{
   color: white!important;
 }
+.textBlack{
+  color: black!important;
+}
 .fontSize12px{
   font-size: 12px;
 }
 /* Css */
 .Navbox{
   position: relative;
+  background-color: rgb(26, 148, 255);
 }
 .loginFormBox{
   position: fixed;
@@ -242,4 +246,14 @@ a {
   background-color: rgba(255, 255, 255, 0.25);
   position: relative;
   border-radius: 10px;
+}
+/* Footer */
+.FooterItemBox > *:not(:last-child){
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* home Page */
+
+.Silder01FullBox{
+  background-color: #fff;
 }

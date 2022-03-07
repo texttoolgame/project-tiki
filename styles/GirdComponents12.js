@@ -159,12 +159,9 @@ export const Gird12i12div = styled.div`
 export const Gird12i01divOffset = styled.div`
     margin-left: 08.3334%;
 `
-    export const Gird12i02divOffset = styled.(Gird12i01div)`
-        &{
-            margin-left: 16.6668%;
-        }
-        
-    `
+    export const Gird12i02divOffset = styled.div`
+    margin-left: 16.6668%;
+`
 export const Gird12i03divOffset = styled.div`
     margin-left: 25.0002%;
 `
