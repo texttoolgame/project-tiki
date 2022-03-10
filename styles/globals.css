@@ -257,3 +257,7 @@ a {
 .Silder01FullBox{
   background-color: #fff;
 }
+.SliderBoxItems{
+  width: 100%;
+  overflow: hidden;
+}

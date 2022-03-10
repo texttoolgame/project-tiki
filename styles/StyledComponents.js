@@ -1,25 +1,32 @@
 import styled from "styled-components";
 // function contruction
 const FooterLiOfAItemsFc = ({className, children}) => (
-    <FooterLiItems>
+    <FooterLiItems className={className}>
         <FooterAItems>
             {children}
         </FooterAItems>
     </FooterLiItems>
 )
 const FooterLiOfH4ItemsFc = ({className, children}) => (
-    <FooterLiItems>
+    <FooterLiItems className={className}>
         <FooterH4Items>
             {children}
         </FooterH4Items>
     </FooterLiItems>
 )
 const FooterSubTitleItemFc = ({className, children}) => (
-    <FooterLiItems>
+    <FooterLiItems className={className}>
         <FooterSubTitleH5Item>
             {children}
         </FooterSubTitleH5Item>
     </FooterLiItems>
+)
+const Slider01LiofAFc = ({className, children}) =>(
+    <Slider01LiItem className={className}>
+        <Slider01AItem>
+            {children}
+        </Slider01AItem>
+    </Slider01LiItem>
 )
 //styled
 export const ContainerFull = styled.div`
@@ -64,3 +71,26 @@ export const FooterSubTitleH5Item =styled.h5`
 `
 export const FooterSubTitleLiOfH5Item = styled(FooterSubTitleItemFc)`
 `
+export const Slider01AItem = styled.a`
+    font-size:14px;
+    color: black;
+    max-height: 20px;
+    width: 100%;
+    align-items: center;
+    `
+export const Slider01LiItem = styled.li`
+    width: auto;
+    padding: 0 10px;
+`
+export const Slider01LiofAItem = styled(Slider01LiofAFc)`
+`
+export const Button = styled.button`
+    display: inline-block;
+    color: palevioletred;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+    display: block;
+`;

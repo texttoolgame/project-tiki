@@ -4,8 +4,7 @@ function HomePage(){
     return (
         <>
             <Silder01></Silder01>
-            Hello world
         </>
     )       
 }   
-export default HomePage
+export default HomePage;

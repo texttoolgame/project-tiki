@@ -4,8 +4,9 @@ export const Flexbox12iUl = styled.ul`
     display: flex;
     flex-direction: ${prop => prop.flexDecoration};
     list-style-type: none;
-        height: ${prop => prop.height};
-    width: ${prop => prop.width};
+    flex-wrap: ${prop => prop.flexwrap ? prop.flexwrap: "nowrap"};
+    height: ${prop => prop.height};
+    width: ${prop => prop.width ? prop.width : "100% "};
     padding : ${prop => prop.padding};
     margin: ${prop => prop.margin};
     align-items: ${prop => prop.alignItem};
@@ -99,7 +100,8 @@ export const Flexbox12idiv = styled.div`
     display: flex;
     flex-direction: ${prop => prop.flexDecoration};
     height: ${prop => prop.height};
-    width: ${prop => prop.width};
+    width: ${prop => prop.width ? prop.width : "100%"};
+    flex-wrap: ${prop => prop.nowrap ? prop.nowrap: "nowrap"};
     padding : ${prop => prop.padding};
     margin: ${prop => prop.margin};
     align-items: ${prop => prop.alignItem};
@@ -192,3 +194,4 @@ export const Gird12i11divOffset = styled.div`
 export const Gird12i12divOffset = styled.div`
     margin-left: 100%;
 `
+
