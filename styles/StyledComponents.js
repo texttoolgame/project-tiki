@@ -80,7 +80,13 @@ export const Slider01AItem = styled.a`
     `
 export const Slider01LiItem = styled.li`
     width: auto;
-    padding: 0 10px;
+    padding: 0 20px;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:first-child {
+        padding-right: 0;
+    }
 `
 export const Slider01LiofAItem = styled(Slider01LiofAFc)`
 `

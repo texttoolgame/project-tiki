@@ -1,4 +1,4 @@
-import {React, useRef, useState, useEffect} from "react";
+import {React, useRef, useState, useEffect, useReducer} from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import {ContainerFull, ContainerFluid, Slider01LiofAItem} from "../../styles/StyledComponents"
 import {Flexbox12idiv, Flexbox12iUl, } from "../../styles/GirdComponents12"
@@ -10,7 +10,8 @@ function Silder01(){
     const btnPrev = useRef(null)
     const [widthSlider01, setwidthSlider01] = useState(10000);
     const [indexSlider01, setIndexSlider01] = useState(1)
-    
+    const [sliderPage, setSliderPage] = useState()
+
     useEffect(()=>{
         //console.log(setWitdh.current.children[0].offsetWidth)
         const lenghtSliderBox = setWitdh.current.children.length;
@@ -18,24 +19,37 @@ function Silder01(){
         for( let i = 0 ; i < lenghtSliderBox ; i++){
             setwidthSlider01(prevState => prevState + childrenSliderBox[i].offsetWidth) ;
         }
+        setwidthSlider01(prevState => prevState -10000)
     },[])
-    // useEffect(()=>{
-    //     btnNext.current.style.display = "none"
-    // },[indexSlider01])
-    const nextSlider01 = () => {
-        setIndexSlider01(indexSlider01 + 1)
+    useEffect(()=>{
+        //console.log(takeWitdh.current.offsetWidth)
+        if(indexSlider01 == 1){
+            setWitdh.current.style.marginLeft = 0
+            btnNext.current.style.display = "none"
+            btnPrev.current.style.display = ""
+        }else{
+            setWitdh.current.style.marginLeft = `-${takeWitdh.current.offsetWidth}px`
+            btnPrev.current.style.display = "none"
+            btnNext.current.style.display = ""
+        }
+    },[indexSlider01])
+    const checkBtnFC = (state, action ) => {
+        switch(action){
+            case 'NEXT': 
+            return setIndexSlider01(indexSlider01 + 1 )
+            case 'PREV':
+            return setIndexSlider01(indexSlider01 - 1 )
+        }
     }
-    const prevtSlider01 = () => {
-        setIndexSlider01(indexSlider01 - 1)
-    }
+    const [btnChage, checkBtn] = useReducer(checkBtnFC , 1)
     return (
         <>
             <ContainerFull className="Silder01FullBox">
                 <ContainerFluid>
                     <Flexbox12idiv>
-                        <button ref={btnNext} onClick={nextSlider01} ><AiOutlineLeft/></button>
+                        <button className="btnSlider01" ref={btnNext} onClick={() =>{checkBtn("PREV")}} ><AiOutlineLeft/></button>
                         <div ref={takeWitdh} className="SliderBoxItems" >
-                            <Flexbox12iUl ref={setWitdh} width={`${widthSlider01}px`} >
+                            <Flexbox12iUl justyfyContent="center"  alignItems="center" ref={setWitdh} width={`${widthSlider01}px`} >
                                 <Slider01LiofAItem>Thịt, Rau Củ</Slider01LiofAItem>
                                 <Slider01LiofAItem>Bách Hóa</Slider01LiofAItem>
                                 <Slider01LiofAItem>Nhà Cửa</Slider01LiofAItem>
@@ -63,7 +77,7 @@ function Silder01(){
                                 <Slider01LiofAItem>Máy Ảnh</Slider01LiofAItem>
                             </Flexbox12iUl>
                         </div>
-                        <button ref={btnPrev} onClick={prevtSlider01}><AiOutlineRight/></button>
+                        <button className="btnSlider01" ref={btnPrev} onClick={() =>{checkBtn("NEXT")}}><AiOutlineRight/></button>
                     </Flexbox12idiv>
                 </ContainerFluid>
             </ContainerFull>

@@ -24,6 +24,9 @@ a {
 .fontSize12px{
   font-size: 12px;
 }
+.GapsItemHomePage{
+  padding: 20px 0;
+}
 /* Css */
 .Navbox{
   position: relative;
@@ -255,9 +258,89 @@ a {
 /* home Page */
 
 .Silder01FullBox{
-  background-color: #fff;
+  background-color: white;
+  height: 50px;
 }
 .SliderBoxItems{
   width: 100%;
   overflow: hidden;
 }
+.SliderBoxItems > ul {
+  transition: 1s;
+  padding: 10px 0;
+}
+.btnSlider01{
+  background: none;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.Slider02{
+  background-color: #f5f5fa;
+}
+/* slider02 */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-button-prev,
+.swiper-button-next{
+  color: #ccc!important;
+  box-sizing: content-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  content: 20px;
+  padding: 5px;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff!important;
+}
+.swiper-button-next{
+  right: 0!important;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.swiper-button-prev{
+  left: 0!important;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.swiper-slide img ,
+.adsSlider02 > img
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/* end slider02 */
+
+/* .adsSlider02{
+  padding-left: 20px;
+} */
