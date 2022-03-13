@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 // function contruction
 const FooterLiOfAItemsFc = ({className, children}) => (
     <FooterLiItems className={className}>
@@ -168,4 +169,23 @@ export const ProductDivSlider03 = styled.div`
     height: inherit;
     background-color: rgba(255, 170, 175, 1);
     border-radius: 25px;
+`
+
+export const AnimationIconSlider03 = keyframes`
+    0% {transform: scale(1,1);}	
+    50% {
+        transform: scale(2,2);
+        opacity: 0.2
+    }
+    100% {transform: scale(1,1);}
+`
+export const ImgIconSlider03 = styled.img`
+    animation: ${AnimationIconSlider03} 1s infinite;
+    witdh: 20px;
+    height: auto;
+`
+export const TimeCountDowSlider03 = styled.p`
+    padding: 5px;
+    background-color:#ff424e;
+    corlor: white;
 `

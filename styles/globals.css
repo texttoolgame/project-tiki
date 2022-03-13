@@ -349,3 +349,8 @@ a {
 .Slider03{
   background-color: #f5f5fa;
 }
+.TitleSlider03{
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
