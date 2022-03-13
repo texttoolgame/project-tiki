@@ -315,10 +315,11 @@ a {
   content: 20px;
   padding: 5px;
 }
-.swiper-button-prev:hover,
-.swiper-button-next:hover{
+.swiper:hover ~ .swiper-button-prev,
+.swiper:hover ~ .swiper-button-next{
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff!important;
+  cursor: pointer;
 }
 .swiper-button-next{
   right: 0!important;
@@ -341,6 +342,10 @@ a {
 }
 /* end slider02 */
 
-/* .adsSlider02{
+.adsSlider02{
   padding-left: 20px;
-} */
+}
+
+.Slider03{
+  background-color: #f5f5fa;
+}

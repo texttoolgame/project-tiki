@@ -32,6 +32,7 @@ export default function App() {
                     <Gird12i08div>
                         <Swiper
                         cssMode={true}
+                         loop={true}
                         navigation={true}
                         pagination={true}
                         mousewheel={true}
