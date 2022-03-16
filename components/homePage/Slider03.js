@@ -5,8 +5,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination , Navigation} from "swiper";
 
-
-import {ContainerFull, ContainerFluid, BoxItemSlider03, ImgBoxSlider03, MainImgSlider03, SubImgSlider03, PriceProductSlider03, SaleProductSlider03, StatusProductBox, StatusProductDivSlider03, ProductDivSlider03, CurrencyProductSlider03, ImgIconSlider03} from "../../styles/StyledComponents"
+import { AiOutlineRight } from "react-icons/ai";
+import {ContainerFull, ContainerFluid, BoxItemSlider03, ImgBoxSlider03, MainImgSlider03, SubImgSlider03, PriceProductSlider03, SaleProductSlider03, StatusProductBox, StatusProductDivSlider03, ProductDivSlider03, CurrencyProductSlider03, ImgIconSlider03, TimeCountDowSlider03} from "../../styles/StyledComponents"
 import {Flexbox12idiv} from "../../styles/GirdComponents12"
 function Slider03() {
   const [sliderElement, setSliderElement] = useState()
@@ -172,12 +172,15 @@ function Slider03() {
                 <ImgIconSlider03 src="https://frontend.tikicdn.com/_desktop-next/static/img/dealFlashIcon.svg"/>
                 <img src="https://frontend.tikicdn.com/_desktop-next/static/img/homnay.svg"/>
               </Flexbox12idiv>
-              <Flexbox12idiv>
-                <div>
-                  <p>{TimeSlider03.h}</p>
-                  <p>{TimeSlider03.m}</p>
-                  <p>{TimeSlider03.s}</p>
-                </div>
+              <Flexbox12idiv alignitems="center">
+                <TimeCountDowSlider03>{TimeSlider03.h}</TimeCountDowSlider03>
+                <p>:</p>
+                <TimeCountDowSlider03>{TimeSlider03.m}</TimeCountDowSlider03>
+                <p>:</p>
+                <TimeCountDowSlider03>{TimeSlider03.s}</TimeCountDowSlider03>
+                <Flexbox12idiv alignItems="center" >
+                  <AiOutlineRight></AiOutlineRight>
+                </Flexbox12idiv>
               </Flexbox12idiv>
             </Flexbox12idiv>
             <Swiper

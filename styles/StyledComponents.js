@@ -188,4 +188,6 @@ export const TimeCountDowSlider03 = styled.p`
     padding: 5px;
     background-color:#ff424e;
     corlor: white;
+    border-radius: 5px;
+    margin: 0 5px;
 `
